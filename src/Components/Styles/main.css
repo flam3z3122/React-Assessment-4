@@ -1,0 +1,36 @@
+
+
+  
+.table{
+    width: 80%;
+    margin: auto;
+}
+.Link{
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+   
+}
+
+.studHeading{
+    text-align: left;
+    font-size: 27px;
+
+   
+}
+
+.addStudent{
+  background-color: #07c344;;
+  color: aliceblue;
+  border-radius: 10px;  
+  width: 200px;
+  box-shadow: 4px 4px 10px  grey;
+}

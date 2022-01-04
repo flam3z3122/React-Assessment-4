@@ -1,11 +1,14 @@
-.App {
+/* .App {
   text-align: center;
+} */
+
+.App{
+
+  background: linear-gradient(to right, #a8ff78, #78ffd6); 
+  height: 100vh;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
