@@ -25,7 +25,7 @@ const AddStudent = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (info.Name, info.Age, info.Course, info.Batch === "") {
+        if (info.Name === '' || info.Age === '' || info.Course === '' || info.Batch === '') {
             alert("Please fill the data inside")
         }
         else {
