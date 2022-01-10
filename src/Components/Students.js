@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -8,67 +8,20 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Link } from "react-router-dom";
 import './Styles/main.css'
-
-
-const rows = [
-    {
-        "Id": "1",
-        "Name": "John",
-        "Age": "21",
-        "Course": "MERN",
-        "Batch": "2021",
-    },
-
-    {
-        "Id": "2",
-        "Name": "Madara",
-        "Age": "32",
-        "Course": "MERN",
-        "Batch": "2017"
-    },
-
-    {
-        "Id": "3",
-        "Name": "Sahil",
-        "Age": "24",
-        "Course": "MERN",
-        "Batch": "2021"
-    },
-
-    {
-        "Id": "4",
-        "Name": "Aneesh",
-        "Age": "21",
-        "Course": "MERN",
-        "Batch": "2019"
-    },
-
-    {
-        "Id": "5",
-        "Name": "Gojo",
-        "Age": "24",
-        "Course": "MERN",
-        "Batch": "2017"
-    },
-
-    {
-        "Id": "6",
-        "Name": "Obito",
-        "Age": "19",
-        "Course": "MERN",
-        "Batch": "2020"
-    },
-
-];
-
+import { ContextApi } from './Context'
+import { NavLink , useNavigate } from "react-router-dom";
 
 
 const Students = () => {
+
+   
+    const [student] = useContext(ContextApi) ;
+    
     return (
       <div>
           <div className="heading" >
                 <h1 className="studHeading">Student Details</h1>
-                <button className="addStudent btn">Add New Student</button>
+                <button className="addStudent btn" > <NavLink  style={{ textDecoration:"none" , color: "white" }} to="/addstudent">Add New Student</NavLink></button>
           </div>
 
         <div className="table">
@@ -85,16 +38,16 @@ const Students = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {rows.map((row) => (
+                        {student.map((stud) => (
                             <TableRow
-                                key={row.Id}
+                                key={stud.id}
                              
                             >
-                                <TableCell component="th" scope="row"> {row.Name}</TableCell>
-                                <TableCell align="right">{row.Age}</TableCell>
-                                <TableCell align="right">{row.Course}</TableCell>
-                                <TableCell align="right">{row.Batch}</TableCell>
-                                <TableCell align="right"> <Link to="">Edit</Link> </TableCell>
+                                <TableCell component="th" scope="row"> {stud.Name}</TableCell>
+                                <TableCell align="right">{stud.Age}</TableCell>
+                                <TableCell align="right">{stud.Course}</TableCell>
+                                <TableCell align="right">{stud.Batch}</TableCell>
+                                <TableCell align="right"> <NavLink to={`/addstudent/${stud.id}`}>Edit</NavLink> </TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

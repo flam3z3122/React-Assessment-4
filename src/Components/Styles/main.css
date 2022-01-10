@@ -33,4 +33,33 @@
   border-radius: 10px;  
   width: 200px;
   box-shadow: 4px 4px 10px  grey;
+  text-decoration: none;
 }
+
+.close{
+    background-color: rgb(226, 98, 98);
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 100px;
+    height: 40px;
+    color: black;
+    font-weight: 500;
+}
+.submit{
+    background-color: yellowgreen;
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 100px;
+    color: black;
+    font-weight: 500;
+}
+
+.close:hover{
+    color: white;
+    background-color: red;
+}
+.submit:hover{
+    color: white;
+    background-color: greenyellow;
+}
+
