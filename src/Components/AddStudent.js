@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ContextApi } from './Context'
 import TextField from '@mui/material/TextField';
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import './Styles/main.css'
 
@@ -29,7 +29,7 @@ const AddStudent = () => {
             alert("Please fill the data inside")
         }
         else {
-            if (!info.id == "") {
+            if (!info.id === "") {
                 setStudent((prev) => prev.map((stud) => (stud.id === info.id) ?
 
                     {

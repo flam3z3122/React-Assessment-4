@@ -6,10 +6,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Link } from "react-router-dom";
 import './Styles/main.css'
 import { ContextApi } from './Context'
-import { NavLink , useNavigate } from "react-router-dom";
+import { NavLink  } from "react-router-dom";
 
 
 const Students = () => {
